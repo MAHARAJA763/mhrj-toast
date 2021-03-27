@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "mhrj-toast": {
+      "projectType": "library",
+      "root": "projects/mhrj-toast",
+      "sourceRoot": "projects/mhrj-toast/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/mhrj-toast/tsconfig.lib.json",
+            "project": "projects/mhrj-toast/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mhrj-toast/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mhrj-toast/src/test.ts",
+            "tsConfig": "projects/mhrj-toast/tsconfig.spec.json",
+            "karmaConfig": "projects/mhrj-toast/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mhrj-toast/tsconfig.lib.json",
+              "projects/mhrj-toast/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "mhrj-toast"
 }

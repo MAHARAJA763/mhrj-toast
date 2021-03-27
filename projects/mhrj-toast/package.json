@@ -1,0 +1,14 @@
+{
+  "name": "mhrj-toast",
+  "version": "2.0.2",
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2"
+  },
+  "scripts": {
+    "postinstall": "node app.js"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
